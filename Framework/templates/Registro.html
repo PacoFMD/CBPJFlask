@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>-</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/responsive.css"> -->
+
+
+</head>
+{% include "Header.html"%}
+{% block body %}
+<body class="body">    
+<br>
+<div class="row">
+    <div class="container col-lg-11 RenderContenido">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="list-group ">
+                    <a data-id="1" class="list-group-item list-group-item-action Accion">Registro de Usuarios</a>
+                    <a data-id="2" class="list-group-item list-group-item-action Accion">Edición/Borrar Usuarios</a>
+                    <a data-id="3" class="list-group-item list-group-item-action Accion">Sección A</a>
+                    <a data-id="4" class="list-group-item list-group-item-action Accion">Sección B</a>
+                    <a data-id="5" class="list-group-item list-group-item-action Accion">Sección C</a>
+                    <a data-id="6" class="list-group-item list-group-item-action Accion">Sección D</a>
+                </div> 
+            </div>
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12 PrintContenido">
+                                <h4>Inicio de Reporte de Persona Desaparecida o No Localizada</h4>
+                                <h6>Datos Generales</h6>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="col-lg-12">
+                                    <form action ="../respuestaUpdate.php" method="post">
+                                        <div class="form-group row">
+                                            <div id="collapse1" class="collapse show">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-1 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Nombre*</label>
+                                                                <input type="text" class="form-control"required="required" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Primer Apellido</label>
+                                                                <input type="text" class="form-control" required="required"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Segundo Apellido</label>
+                                                                <input class="form-control" type="text" required="required"/>
+                                                            </div>
+                                                        </div>                                      
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-1 col-lg-2">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Sexo</label>                                                                        
+                                                                    <select id="role" name="role" class="custom-select">                                    
+                                                                    <option value= 1 selected >-SEXO-</option>
+                                                                    <option value= 2>Hombre</option>
+                                                                    <option value= 3>Mujer</option>                                                                                 
+                                                                    </select>                                                                               
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-1 col-lg-2">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">Genero</label>                                                                        
+                                                                        <select id="role" name="role" class="custom-select">                                    
+                                                                        <option value= 1 selected >-Genero-</option>
+                                                                        <option value= 2>Hombre</option>
+                                                                        <option value= 3>Mujer</option>  
+                                                                        
+                                                                                                                            
+                                                                        </select>                                                                               
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-4">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Nacionalidad</label>                                                                        
+                                                                            <select id="role" name="role" class="custom-select">                                    
+                                                                            <option value= 1 selected >México</option>
+                                                                            <option value= 2>Otro</option>
+                                                                            <option value= 3>Alemania</option>                                                                                 
+                                                                            </select>                                                                               
+                                                                    </div>
+                                                                </div>
+                                                        <div class="col-md-3 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="control-label">CURP</label>
+                                                                <input type="text" class="form-control" />
+                                                            </div>
+                                                        </div>                                           
+                                                        
+                                                    </div>
+                                                    <div class="row">
+                                                            <div class="col-md-3 col-lg-4">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">RFC</label>
+                                                                        <input type="text" class="form-control" />
+                                                                    </div>
+                                                                </div>   
+                                                            <div class="col-md-1 col-lg-4">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">Estado Civil</label>                                                                        
+                                                                        <select id="role" name="role" class="custom-select">                                    
+                                                                        <option value= 1 selected >-Estado Civil-</option>
+                                                                        <option value= 2>Casado</option>
+                                                                        <option value= 3>Soltero</option>                                                                                 
+                                                                        </select>                                                                               
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-1 col-lg-4">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Lugar de Nacimiento</label>                                                                        
+                                                                            <select id="role" name="role" class="custom-select">                                    
+                                                                            <option value= 1 selected >-ENTIDAD-</option>
+                                                                            <option value= 2>Jalisco</option>
+                                                                            <option value= 3>otro</option>                                                                                 
+                                                                            </select>                                                                               
+                                                                    </div>
+                                                                </div>
+                                                    </div>
+                                                    <div class="row">
+                                                            <div class="col-md-3 col-lg-4">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Fecha de Nacimiento</label>
+                                                                        <input id="fecha" name="fecha" placeholder="Fecha Nacimiento" class="form-control here" required="required" type="date" value = "">
+                                                                    </div>
+                                                                </div>   
+                                                            <div class="col-md-1 col-lg-4">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">Si desconoce la edad</label>
+                                                                    <label class="control-label">exacta, señale a edad proxima</label>
+                                                                    <div class="col-md-12"> 
+                                                                        <div class="row">                                                                                        
+                                                                            <div class="col-sm-4 col-xs-4 col-md-4 col-lg-4">
+                                                                                    <input type="number" class="form-control" placeholder="AÑOS"/> 
+                                                                            </div>
+                                                                            <div class="col-sm-4 col-xs-4 col-md-4 col-lg-4">
+                                                                                    <input type="number" class="form-control" placeholder="MESES"/> 
+                                                                            </div>
+                                                                            <div class="col-sm-4 col-xs-4 col-md-4 col-lg-4">
+                                                                                    <input type="number" class="form-control" placeholder="DIAS"/> 
+                                                                            </div>
+                                                                        </div> 
+                                                                    </div> 
+                                                                                                                                                        
+                                                                </div>
+                                                                
+                                                            </div>
+                                                            
+                                                            <div class="col-md-1 col-lg-4">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Escolaridad</label>                                                                        
+                                                                            <select id="role" name="role" class="custom-select">                                    
+                                                                            <option value= 1 selected >-Escolaridad-</option>
+                                                                            <option value= 2>Primaria</option>
+                                                                            <option value= 3>Secundaria</option>                                                                                 
+                                                                            </select>                                                                               
+                                                                    </div>
+                                                                </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-1 col-lg-2">
+                                                            <div class="form-group">
+                                                                <label class="control-label">¿Habla Español?</label>
+                                                                <div class="container"> 
+                                                                    <label class="radio-inline" for="idioma-0">
+                                                                        <input type="radio" name="idioma" id="idioma-0" value="1" checked="checked">
+                                                                        Si
+                                                                    </label> 
+                                                                    <label class="radio-inline" for="idioma-1">
+                                                                        <input type="radio" name="idioma" id="idioma-1" value="2">
+                                                                        No
+                                                                    </label>  
+                                                                </div>
+                                                            </div>
+                                                        </div>   
+                                                        <div class="col-sm-1 col-lg-2">
+                                                            <div class="form-group">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">¿Sabe Leer?</label>
+                                                                    <div class="container"> 
+                                                                        <label class="radio-inline" for="leer-0">
+                                                                            <input type="radio" name="leer" id="leer-0" value="1" checked="checked">
+                                                                            Si
+                                                                        </label> 
+                                                                        <label class="radio-inline" for="leer-1">
+                                                                            <input type="radio" name="leer" id="leer-1" value="2">
+                                                                            No
+                                                                        </label>  
+                                                                    </div>
+                                                                </div>                                                                                                                                                       
+                                                            </div>                                                                
+                                                        </div>
+                                                        <div class="col-sm-1 col-lg-2">
+                                                                <div class="form-group">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">¿Sabe Escribir?</label>
+                                                                        <div class="container"> 
+                                                                            <label class="radio-inline" for="escirbir-0">
+                                                                                <input type="radio" name="escirbir" id="escirbir-0" value="1" checked="checked">
+                                                                                Si
+                                                                            </label> 
+                                                                            <label class="radio-inline" for="escirbir-1">
+                                                                                <input type="radio" name="escirbir" id="escirbir-1" value="2">
+                                                                                No
+                                                                            </label>  
+                                                                        </div>
+                                                                    </div>                                                                                                                                                       
+                                                                </div>                                                                
+                                                            </div>
+                                                        <div class="col-md-1 col-lg-6">
+                                                            <div class="form-group">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">¿Desea que se haga pública la información de la Persona Desaparecida o No Localizada?</label>
+                                                                    <div class="container"> 
+                                                                        <label class="radio-inline" for="auto-0">
+                                                                            <input type="radio" name="auto" id="auto-0" value="1" checked="checked">
+                                                                            Si
+                                                                        </label> 
+                                                                        <label class="radio-inline" for="auto-1">
+                                                                            <input type="radio" name="auto" id="auto-1" value="2">
+                                                                            No
+                                                                        </label>  
+                                                                    </div>
+                                                                </div>                                                                                  
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                            <div class="col-md-1 col-lg-2">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">¿Está Embarazada?</label>
+                                                                    <div class="container"> 
+                                                                        <label class="radio-inline" for="embarazada-0">
+                                                                            <input type="radio" name="embarazada" id="embarazada-0" value="1" checked="checked">
+                                                                            Si
+                                                                        </label> 
+                                                                        <label class="radio-inline" for="embarazada-1">
+                                                                            <input type="radio" name="embarazada" id="embarazada-1" value="2">
+                                                                            No
+                                                                        </label> 
+                                                                        <label class="radio-inline" for="embarazada-2">
+                                                                                <input type="radio" name="embarazada" id="embarazada-2" value="3">
+                                                                                Se desconoce
+                                                                            </label>  
+                                                                    </div>
+                                                                </div>
+                                                            </div>   
+                                                            <div class="col-md-1 col-lg-4">
+                                                                <div class="form-group">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Meses de embarazo</label>
+                                                                        <div class="col-md-4"> 
+                                                                            <input type="number" class="form-control" />
+                                                                        </div>
+                                                                    </div>                                                                                                                                                       
+                                                                </div>                                                                
+                                                            </div>
+                                                        </div>
+                                                </div> 
+                                            </div>  
+                                        <div class="offset-4 col-8">
+                                            <button href= "Usuarios.php" name="submit" type="submit" class="btn btn-primary">Guardar Perfil</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+       
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  
+  </body>
+  {% endblock %}
+</html>
